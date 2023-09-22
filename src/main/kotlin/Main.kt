@@ -17,20 +17,24 @@ fun main(args: Array<String>) {
             currentPlayer = player1
         }
     }
+    println("Hi, trage den Namen des ersten Spielers ein:")
+    player1.name = scanner.nextLine()
+    println("jetzt noch den zweiten Spieler:")
+    player2.name = scanner.nextLine()
 
     while (!board.gameIsOver) {
         changeTurnsOfThePlayer()
 
-        println("Trage die Zeile ein:")
+        println("${currentPlayer.name} du bist dran, trage die Zeile ein:")
         val chosenRow = Integer.parseInt(scanner.nextLine())
 
-        println("Trage die Spalte ein:")
+        println("${currentPlayer.name} trage jetzt noch die Spalte ein:")
         val chosenColumn = Integer.parseInt(scanner.nextLine())
 
         board.setMarkOnTheBoard(chosenRow, chosenColumn, currentPlayer.mark)
 }
     if (board.gameIsOver) {
-        println("Glückwunsch du hast gewonnen")
+        println("Glückwunsch ${currentPlayer.name} du hast gewonnen!")
         board.resetGame()
 
     }
