@@ -1,12 +1,12 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-    var player1 = Player()
-    var player2 = Player()
+    val player1 = Player()
+    val player2 = Player()
     var currentPlayer = player2
     player1.mark = "X"
     player2.mark = "O"
-    var board = PlayBoard()
+    val board = PlayBoard()
 
     val scanner = Scanner(System.`in`)
 
