@@ -28,9 +28,9 @@ class PlayBoard {
         }
     }
 
-    fun checkIfMarkPositionIsValid(row: Int, column: Int): Boolean {
-        return ((row in 1..3) && (column in 1..3))
-    }
+    fun checkIfMarkPositionIsValid(row: Int, column: Int) =
+        (row in 1..3) && (column in 1..3)
+
 
     fun resetGame() {
         resetBoard()
