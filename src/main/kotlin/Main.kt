@@ -11,12 +11,9 @@ fun main(args: Array<String>) {
     val scanner = Scanner(System.`in`)
 
     fun changeTurnsOfThePlayer() {
-        if (player1 == currentPlayer) {
-            currentPlayer = player2
-        } else {
-            currentPlayer = player1
-        }
+        currentPlayer = if(player1 == currentPlayer) player2 else player1
     }
+
     println("Hi, trage den Namen des ersten Spielers ein:")
     player1.name = scanner.nextLine()
     println("jetzt noch den zweiten Spieler:")
